@@ -24,7 +24,7 @@ div::-webkit-scrollbar {
 }
 
 #sun {
-  fill: #ff7e00;
+  fill: #F4D37D;
   transform: translateZ(-6px) scale(7) translateY(-25vh);
   height: 100vh;
 }
