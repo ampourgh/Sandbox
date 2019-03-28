@@ -1,0 +1,39 @@
+article > aside { grid-area: side;}
+article > aside2 { grid-area: complete; }
+article > nav { grid-area: menu; }
+article > section { grid-area: content; }
+article > header { grid-area: header; background: rgba(200, 0, 0, .3)}
+article > footer { grid-area: footer; }
+article > rightNav { grid-area: rNav; background: #ccc}
+
+article {
+  display: grid;
+  grid-gap: .2em;
+  grid-template-areas:
+    "menu  header  header header rNav"
+    "menu content content side rNav"
+    "menu content content side rNav"
+    "menu content content side rNav"
+    "menu  footer  footer footer rNav"
+	"complete complete complete complete rNav";
+}
+
+article {
+  max-width: 25em;
+  min-height: 20em;
+  background-color: rgba(10, 10, 10, .1);
+  color: rgba(10, 10, 10, .5);
+  padding: .2em;
+  font-size: 150%;
+}
+
+article > *{
+  background: #fff;
+  color: rgba(10, 10, 10, .9);
+}
+
+p {
+	font-family: 'Major Mono Display', monospace;
+	margin: 5%;
+	font-size: .75em;
+}
