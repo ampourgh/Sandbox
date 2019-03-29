@@ -20,12 +20,12 @@ h1 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto;
+  grid-template-areas: "grid";
   background-color: rgba(260, 260, 260, 0);
   padding: 1px;
 }
 
-.grid-item {
+grid {
   margin: 10px;
   border-radius: 2px;
   background-color: rgba(260, 260, 260, .5);
@@ -38,21 +38,21 @@ h1 {
   text-align: center;
 }
 
-.grid-item:hover {
+grid:hover {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 
 @media only screen and (min-width: 600px) {
   .grid-container {
-    grid-template-columns: auto auto;
+    grid-template-areas:"grid grid";
   }
 }
 
 @media only screen and (min-width: 900px) {
   .grid-container {
     padding: 0 10%;
-    grid-template-columns: auto auto auto;
+    grid-template-areas: "grid grid grid";
   }
 }
 /*
