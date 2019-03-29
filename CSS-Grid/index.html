@@ -1,63 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <style>
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto;
-    background-color: #ccc;
-    padding: 1px;
-  }
-
-  .grid-item {
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(0, 0, 0, 1);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
-
-  @media only screen and (min-width: 500px) {
-    .grid-container {
-      grid-template-columns: auto auto;
-    }
-  }
-
-  @media only screen and (min-width: 800px) {
-    .grid-container {
-      grid-template-columns: auto auto auto;
-    }
-  }
-
-  @media only screen and (min-width: 1000px) {
-    .grid-container {
-      grid-template-columns: auto auto auto auto;
-    }
-  }
-
-  @media only screen and (min-width: 1200px) {
-    .grid-container {
-      padding: 0 10%;
-      grid-template-columns: auto auto auto auto auto;
-    }
-  }
 </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS GRID</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<h1>Grid</h1>
+<div style="text-align: center">
+  <h1>G R I D</h1>
+</div>
 
 <div class="grid-container">
-  <div class="grid-item">1</div>
-  <div class="grid-item">2</div>
-  <div class="grid-item">3</div>
-  <div class="grid-item">4</div>
-  <div class="grid-item">5</div>
-  <div class="grid-item">6</div>
-  <div class="grid-item">7</div>
-  <div class="grid-item">8</div>
-  <div class="grid-item">9</div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 1</h3>
+    <p class="card-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel auctor mauris. Suspendisse ornare rhoncus suscipit. Duis purus lacus, semper a ante vel, aliquam venenatis enim. Aenean tempus rhoncus diam. Pellentesque quis tortor purus. Aliquam interdum a libero vel vehicula. In lorem ante, elementum sit amet nulla id, fringilla convallis augue. Sed laoreet augue id velit posuere imperdiet. Mauris sed magna massa. Suspendisse ante elit, semper ut convallis eu, porttitor in lacus. Ut sed vestibulum lacus. Curabitur dictum magna eu sodales malesuada. Cras ut pharetra urna. Morbi placerat sit amet lacus bibendum tincidunt.
+    </p>
+  </div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 2</h3>
+    <p class="card-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel auctor mauris. Suspendisse ornare rhoncus suscipit. Duis purus lacus, semper a ante vel, aliquam venenatis enim. Aenean tempus rhoncus diam. Pellentesque quis tortor purus. Aliquam interdum a libero vel vehicula. In lorem ante, elementum sit amet nulla id, fringilla convallis augue. Sed laoreet augue id velit posuere imperdiet. Mauris sed magna massa. Suspendisse ante elit, semper ut convallis eu, porttitor in lacus. Ut sed vestibulum lacus.
+    </p>
+  </div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 3</h3>
+    <p class="card-body">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel auctor mauris. Suspendisse ornare rhoncus suscipit. Duis purus lacus, semper a ante vel, aliquam venenatis enim. Aenean tempus rhoncus diam. Pellentesque quis tortor purus. Aliquam interdum a libero vel vehicula. In lorem ante, elementum sit amet nulla id, fringilla convallis augue. Sed laoreet augue id velit posuere imperdiet. Mauris sed magna massa. Suspendisse ante elit, semper ut convallis eu, porttitor in lacus. Ut sed vestibulum lacus. Curabitur dictum magna eu sodales malesuada.
+    </p>
+  </div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 4</h3>
+    <p class="card-body">BODY</p>
+  </div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 5</h3>
+    <p class="card-body">BODY</p>
+  </div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 6</h3>
+    <p class="card-body">BODY</p>
+  </div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 7</h3>
+    <p class="card-body">BODY</p>
+  </div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 8</h3>
+    <p class="card-body">BODY</p>
+  </div>
+  <div class="grid-item">
+    <h3 class="card-title">TITLE 9</h3>
+    <p class="card-body">BODY</p>
+  </div>
 </div>
 
 </body>
