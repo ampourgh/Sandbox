@@ -32,4 +32,18 @@ function autoChangePagination() {
 }
 
 var idNumeSelector = 0;
-autoChangePagination(idNumeSelector);
+autoChangePagination();
+
+
+// OnClick function: changes to button & syncs autoChangePagination
+function onClickPagination(id) {
+
+  console.log(id);
+
+  idsNum = id.replace(/\D/g,'');
+
+  myFunction(id);
+
+  idNumeSelector = idsNum;
+
+}
