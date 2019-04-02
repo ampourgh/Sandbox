@@ -1,5 +1,4 @@
-body
-{
+body {
     height: 100%;
     margin: 0;
     user-select: none;
@@ -7,8 +6,7 @@ body
     background-color: grey;
 }
 
-#app
-{
+#app {
     position: absolute;
     top: 50%;
     right:0;
@@ -21,25 +19,22 @@ body
     z-index:1;
 }
 
-.button
-{
-    width: 20px;
-    height: 20px;
+.button {
+    width: 15px;
+    height: 7px;
     float: left;
     margin-right: 20px;
     background-color: #fff;
-    border-radius: 20px;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s ease width;
 }
 
-.button:last-child
-{
+.button:last-child {
     margin-right: 0;
 }
 
-.button.active
-{
-    width: 60px;
+.button.active {
+    width: 40px;
     cursor: auto;
 }
