@@ -1,0 +1,121 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+/* Typography imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+p, a {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* Generic styles */
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  background-color: #0074e6;
+  text-decoration: none;
+  color: white;
+  border-radius: .25rem;
+  text-align: center;
+  display: inline-block;
+  transition: all .3s;
+}
+
+a:hover {
+  opacity: .9;
+}
+
+/* Styles for the banner image */
+.banner {
+  /* Photo by mnm.all on Unsplash */
+  background-color: #00274d;
+  background-size: cover;
+  padding: 4rem 2rem;
+  /* grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+}
+
+.banner > * {
+  color: white;
+}
+
+.banner > h1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.banner > article > p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.banner > article > a {
+  padding: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* grid-container-card-button styles */
+.grid-container-card-button {
+  padding: 2rem;
+
+}
+
+.grid-container-card-button > ul {
+  display: grid;
+  grid-template-areas:"grid";
+  grid-gap: 1rem;
+}
+
+.grid-container-card-button > ul > li {
+  border: 1px solid #E2E2E2;
+  border-radius: .5rem;
+  list-style-type: none;
+}
+
+.grid-container-card-button > ul > li > p, .grid-container-card-button > ul > li > h1 {
+  line-height: 1.5;
+  padding: 2rem 1.5rem;
+  color: #666666;
+}
+
+.grid-container-card-button > ul > li > a {
+  padding: .5rem 1rem;
+  margin: 1.5rem;
+}
+
+/* footer */
+footer {
+  height: 100vh;
+  background-color: #000d1a;
+  padding: .75rem;
+  color: white;
+  text-align: center;
+  font-size: .75rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .grid-container-card-button > ul {
+    grid-template-areas:"grid grid";
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .grid-container-card-button > ul {
+    padding: 0 10%;
+    grid-template-areas: "grid grid grid";
+  }
+}
