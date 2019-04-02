@@ -1,3 +1,4 @@
+// Pagination change function
 function myFunction(id) {
   idsNum = id.replace(/\D/g,'');
   var colors = ['black', 'blue', 'purple', 'green'];
@@ -14,3 +15,21 @@ function myFunction(id) {
 
   document.getElementById(id).className +=" active";
 }
+
+// Automically change the pagination
+function autoChangePagination() {
+
+  var div = 'div' + idNumeSelector;
+  myFunction(div);
+
+  idNumeSelector++;
+
+  if (idNumeSelector == 4) {
+    idNumeSelector = 0;
+  }
+
+  setTimeout(autoChangePagination, 5000);
+}
+
+var idNumeSelector = 0;
+autoChangePagination(idNumeSelector);
