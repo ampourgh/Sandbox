@@ -1,9 +1,25 @@
 * {
   font-family: 'Open Sans', sans-serif;
+
 }
 
 h1 {
   font-size: 5em;
+}
+
+.title-container {
+  margin: 0 10%;
+  border-left: 15px #86E4CC solid;
+}
+
+.title-container:hover {
+  border-left: 30px #86E4CC solid;
+  -webkit-transition: 1s; /* Safari */
+  transition: 1s;
+}
+
+.border-right-val {
+  padding-right: 25px
 }
 
 .card-title  {
