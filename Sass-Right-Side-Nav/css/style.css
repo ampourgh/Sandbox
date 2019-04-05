@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Oswald:200,400|Playfair+Display:400,400i");
 
+* {
+  margin: 0;
+}
+
 a {
   text-decoration: none;
   color: #000;
@@ -15,7 +19,7 @@ a:hover {
 }
 
 .navbar-container {
-  top: 10%;
+  top: 15%;
   left: 0;
   background: #ffffff;
   height: 310px;
@@ -34,12 +38,12 @@ a:hover {
   margin: 0;
 }
 
-
 .navbar-icon {
   margin-top: 24px;
   margin-left: 49px;
   font-size: 1.2em;
 }
+
 .navbar-icon:hover {
   color: #ccc;
   cursor: pointer;
@@ -50,6 +54,7 @@ a:hover {
   margin-top: 35px;
 }
 .navbar-title h4 {
+  margin: 32px;
   writing-mode: vertical-rl;
   font-family: 'Open Sans', sans-serif;
   letter-spacing: .2em;
@@ -159,4 +164,39 @@ h1 span {
   .close {
     transform: translateX(-300px);
   }
+}
+
+/* Styles for the banner image */
+.banner {
+  /* Photo by mnm.all on Unsplash */
+  background-color: #00274d;
+  background-size: cover;
+  padding: 4rem 2rem;
+  /* grid styles */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  align-items: center;
+
+}
+
+.banner > * {
+  color: white;
+  margin:0;
+  padding:0;
+}
+
+.banner > h1 {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+.banner > article > p {
+  text-align: justify;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.banner > article > a {
+  padding: 1rem;
+  margin-top: 1.5rem;
 }
