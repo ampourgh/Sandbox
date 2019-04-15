@@ -1,0 +1,4 @@
+/* - FIX Datepicker -*/
+.bootstrap-datetimepicker-widget.dropdown-menu  {
+    width: 100%;
+}
