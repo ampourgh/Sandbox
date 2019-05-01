@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JSON LOADERS</title>
+</head>
+<body>
+  <a href="#" onclick="intranetSearchMakeSingleClick('search term');" style="cursor: pointer;">link text</a>
+
+  <script>
+
+  intranetSearchMakeSingleClick = (substring) => {
+
+    try {
+
+      // return json data from any file path (asynchronous)
+      getJSON = (path) => {
+        return fetch(path).then(response => response.json());
+      }
+
+      // load json data; then proceed
+      getJSON('config.json').then(info => {
+
+        var counter = 0;
+        var array = [];
+
+        var i;
+
+        console.log('start');
+        console.log(info["data"].length);
+
+        for (i = 0; i < info["data"].length; i++) {
+
+          if (info["data"][i][1].toLowerCase().includes(substring.toLowerCase())) {
+            console.log(info['data'][i][1]);
+            array.push(info['data'][i]);
+
+            counter += 1;
+          }
+
+        }
+
+        console.log('end');
+
+        if (counter == 1) {
+          window.location = 'documents?id=' + array[0][0];
+        } else {
+          window.location = 'query=' + substring;
+        }
+      }
+    }
+
+    catch(err) {
+      window.location = 'query=' + substring;
+    }
+
+  });
+
+
+  </script>
+</body>
+</html>

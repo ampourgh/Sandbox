@@ -7,16 +7,16 @@
   <title>JavaScript JSON Dropdown</title>
 </head>
 <body>
-  <select onchange="test(this, 'm');">
-    <option value="jan">Jan</option>
-    <option value="feb">Feb</option>
+  <select onchange="calendarDropdown(this, 'm');">
     <option value="march">March</option>
+    <option value="feb">Feb</option>
+    <option value="jan">Jan</option>
   </select>
 
-  <select onchange="test(this, 'y');">
-    <option value="2017">2017</option>
-    <option value="2018">2018</option>
+  <select onchange="calendarDropdown(this, 'y');">
     <option value="2019">2019</option>
+    <option value="2018">2018</option>
+    <option value="2017">2017</option>
   </select>
 
   <div id='content'></div>
@@ -71,23 +71,15 @@
     var currentSetMonth;
     var currentSetYear;
 
-    window.test = function(e, dateChange) {
+    window.calendarDropdown = function(e, dateChange) {
 
-      if (typeof currentSetMonth === 'undefined' || currentSetMonth === null ) {
-        currentSetMonth = 'April';
-      }
+      currentSetMonth = (typeof currentSetMonth === 'undefined' || currentSetMonth === null ) ? 'march' : currentSetMonth;
+      currentSetYear = (typeof currentSetYear === 'undefined' || currentSetYear === null ) ? 2019 : currentSetYear;
 
-      if (typeof currentSetYear === 'undefined' || currentSetYear === null ) {
-        currentSetYear = 2019;
-      }
+      currentSetMonth = (dateChange == 'm') ? e.value : currentSetMonth;
+      currentSetYear = (dateChange == 'y') ? e.value : currentSetYear;
 
-      if (dateChange == 'y') {
-        currentSetYear = e.value;
-      } else {
-        currentSetMonth = e.value;
-      }
-
-      console.log(objectLiteral[currentSetYear][currentSetMonth][0])
+      console.log(objectLiteral[currentSetYear][currentSetMonth][0] + ' ' + objectLiteral[currentSetYear][currentSetMonth][1]);
 
       document.getElementById("content").innerHTML = '';
 
@@ -95,6 +87,8 @@
         document.getElementById("content").innerHTML += ' ' + element;
       });
     }
+
+    calendarDropdown(null, null);
 
   </script>
 </body>
